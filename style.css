@@ -1,0 +1,321 @@
+:root {
+    --green: #21DCA7;
+    --dark: #111A25;
+    --white: white;
+    --light: #e8e9ea;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+    color: var(--white);
+}
+
+html {
+    scroll-padding: 6rem;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--dark);
+    min-height: 200vh;
+}
+
+body h1, .dot {
+    font-size: 70px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+#h1-small {
+    color: var(--green);
+    font-weight: 400;
+}
+
+.dot {
+    color: var(--green);
+}
+
+p, span, li, a {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+body a {
+    position: relative;
+    text-decoration: none;
+    color: var(--green);
+    text-transform: uppercase;
+}
+
+body a.btn-underline::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--green);
+    bottom: -5px;
+    left: 0;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+  }
+  
+body a.btn-underline:hover::before {
+transform-origin: left;
+transform: scaleX(1);
+}
+
+nav {
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    padding: 3rem 6rem;
+}
+
+@media (max-width: 1200px) {
+
+    body .container {
+        padding: 1.5rem 12px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    body h1, body .dot{
+        font-size: 32px;
+    }
+    p, span, li, a  {
+        font-size: 16px;
+    }
+
+    body .landingpage .links {
+        margin-top: 1rem;
+    }
+    body .btn-outline, body .btn-outline-dark {
+        padding: 0.5rem 1rem !important;
+    }
+
+    nav .nav-right {
+        display: none;
+    }
+    body .landingpage .col-12 {
+        width: 100%;
+    }
+    body .landingpage {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .phone-img {
+        width: 220px;
+        height: auto;
+    }
+
+    .uebergang {
+        display: none;
+    }
+}
+
+
+@media (min-width: 1201px) {
+
+    .landingpage {
+        min-height: 80vh;
+    }
+
+    nav .nav-right ul li {
+        width: 180px;
+    }
+
+    #h1-small {
+        font-size: 20px;
+    }
+
+    .landingpage .links {
+        gap: 2rem;
+    }
+
+    .landingpage .col-12 {
+        width: 50%;
+    }
+
+    .phone-img {
+        width: 550px;
+        height: auto;
+    }
+
+    .landingpage p {
+        font-size: 20px;
+    }
+
+    .uebergang-mb {
+        display: none;
+    }
+}
+
+nav .nav-right ul {
+    display: flex;
+}
+
+nav .nav-right ul li {
+    list-style: none;
+    text-align: end;
+    padding: 12px;
+    margin: 0 5px;
+}
+
+.landingpage {
+    position: relative;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    overflow: hidden;
+    justify-content: space-between;
+}
+
+.landingpage p {
+    color: var(--light);
+}
+
+.landingpage .links {
+    margin-top: 4rem;
+    display: flex;
+}
+
+.landingpage .col-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.landingpage .col-right {
+    display: flex;
+    align-items: flex-end;
+    width: 50%;
+    justify-content: center;
+}
+
+body .btn-outline {
+    padding: 1rem 2rem;
+    border: 1px var(--green) solid;
+    border-radius: 90px;
+    font-weight: 300;
+}
+
+body .btn-outline-dark {
+    padding: 1rem 2rem;
+    border: 1px var(--dark) solid;
+    border-radius: 90px;
+    font-weight: 300;
+}
+
+body .btn-outline-dark:hover {
+    border: 1px var(--green) solid;
+    transition: .2s ease-in-out;
+}
+
+body .btn-outline:hover {
+    background-color: var(--green);
+    color: var(--dark);
+    transition: .2s ease-in-out;
+}
+
+main {
+    background-color: var(--green);
+    padding: 12px;
+}
+
+
+
+svg.uebergang, svg.uebergang-mb {
+    position: absolute;
+    width: 100%;
+    bottom: -1px;
+    left: 0;
+    height: fit-content;
+    right: 0;
+    z-index: -9;
+}
+
+.pl {
+    min-height: 100vh;
+}
+
+
+/* outfit-200 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 200;
+    src: url('../fonts/outfit-v11-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* outfit-300 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/outfit-v11-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* outfit-regular - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/outfit-v11-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* outfit-500 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/outfit-v11-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* outfit-600 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/outfit-v11-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* outfit-700 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/outfit-v11-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* outfit-800 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/outfit-v11-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+  /* outfit-900 - latin */
+  @font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/outfit-v11-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
