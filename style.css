@@ -72,6 +72,8 @@ transform: scaleX(1);
 nav {
     justify-content: space-between;
     gap: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 .nav-left {
@@ -81,7 +83,9 @@ nav {
 
 .container {
     display: flex;
-    padding: 3rem 6rem;
+   /* padding: 3rem 6rem; */
+   padding-left: 6rem;
+   padding-right: 6rem;
 }
 
 @media (max-width: 1200px) {
@@ -144,10 +148,6 @@ nav {
         font-size: 20px;
     }
 
-    .landingpage .links {
-        gap: 2rem;
-    }
-
     .landingpage .col-12 {
         width: 50%;
     }
@@ -168,6 +168,10 @@ nav {
     footer .fazit {
         font-size: 20px;
     }
+}
+
+.landingpage .links {
+    gap: 2rem;
 }
 
 nav .nav-right ul {
@@ -239,7 +243,7 @@ body .btn-outline:hover {
 
 main {
     background-color: var(--green);
-    padding: 12px;
+    padding: 0 12px;
 }
 
 
@@ -264,13 +268,18 @@ footer svg.uebergang, footer svg.uebergang-mb {
     z-index: -9;
 }
 
+body .btn-arrow {
+    display: flex;
+    gap: 8px;
+}
+
 footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    padding: 12px;
+    padding: 0 12px;
     position: relative;
 }
 
