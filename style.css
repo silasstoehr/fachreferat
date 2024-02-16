@@ -29,7 +29,7 @@ body main * {
 
 .img-fluid {
     max-width: 100%;
-    height: auto;
+    height: max-content;
 }
 
 body h1, .dot {
@@ -306,6 +306,7 @@ footer {
 
 .text-center {
     max-width: 800px;
+    font-weight: 600;
     text-align: center;
 }
 
@@ -319,32 +320,47 @@ footer .autor a {
     text-transform: none;
 }
 
+.all-pl {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    padding-bottom: 6rem;
+}
+
 .pl {
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    background-color: var(--dark);
+    padding: 3rem 4rem;
+    border-radius: 6px;
+}
+
+.pl * {
+    color: var(--white);
 }
 
 .pl *:not(h1, h2, h3)  {
-    font-weight: 400;
+    font-weight: 300;
+    color: var(--light);
 }
 
 .pl .headline {
     display: flex;
     justify-content: space-between;
     padding: 1rem 0;
-    border-bottom: 1px solid var(--dark);
+    border-bottom: 1px solid #e8e9ea8f;
 }
 
-.pl .description {
+.pl > .row {
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
 }
 
-.pl .description .col-right {
+.pl > .row > .col-left {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    gap: 4rem;
 }
 
 .pl .info {
@@ -352,6 +368,7 @@ footer .autor a {
     flex-direction: column;
     gap: 10px;
 }
+
 
 
 .pl .benefits {
@@ -371,13 +388,6 @@ footer .autor a {
     .pl .headline {
         flex-direction: column;
     }
-
-    .pl .description {
-        flex-direction: column;
-    }
-    .pl .description > div {
-        width: 100%;
-    }
     
     .pl .benefits{
         flex-direction: column;
@@ -386,17 +396,24 @@ footer .autor a {
     .pl .benefits > div{
         width: 100%;
     }
+
+    .pl > .row {
+        flex-direction: column;
+    }
 }
 
 /* Desktop */
 @media (min-width: 1201px) {
-
+    .pl > .row > .col-right {
+        width: 30%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .pl > .row > .col-left {
+        width: 70%;
+    }
     .pl {
         font-size: 18px;
-    }
-
-    .pl .description > div {
-        width: 50%;
     }
 
     .pl .info .row {
