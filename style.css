@@ -164,6 +164,10 @@ nav {
     .uebergang-mb {
         display: none;
     }
+
+    footer .fazit {
+        font-size: 20px;
+    }
 }
 
 nav .nav-right ul {
@@ -250,9 +254,45 @@ svg.uebergang, svg.uebergang-mb {
     z-index: -9;
 }
 
+footer svg.uebergang, footer svg.uebergang-mb {
+    position: absolute;
+    width: 100%;
+    top: -1px;
+    left: 0;
+    height: fit-content;
+    right: 0;
+    z-index: -9;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 12px;
+    position: relative;
+}
+
+footer .fazit {
+    max-width: 800px;
+    text-align: center;
+}
+
+footer .autor {
+    position: absolute;
+    bottom: 2rem;
+}
+
+footer .autor a {
+    color: var(--white);
+    text-transform: none;
+}
+
 .pl {
     min-height: 100vh;
 }
+
 
 
 /* outfit-200 - latin */
