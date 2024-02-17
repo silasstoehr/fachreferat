@@ -6,6 +6,8 @@
     <meta name="keywords" content="HTML, CSS, JavaScript, Python, Silas Noah Stöhr, Fachreferat, BOS">
     <meta name="author" content="Silas Noah Stöhr">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Animation/AOS/aos.css">
+    <script src="./Animation/AOS/aos.js"></script>
     <link rel="stylesheet" href="/style.css">
     <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
@@ -39,13 +41,13 @@
             </nav>
             <div class="landingpage container">
                 <div class="col-12 col-left">
-                    <h1><span id="h1-small">Übersicht & Vergleich von</span><br>
+                    <h1 data-aos="fade-right" data-aos-offset="500" data-aos-duration="1000"><span id="h1-small">Übersicht & Vergleich von</span><br>
                     Programmiersprachen 
                     <br> der Webentwicklung<span class="dot">.</span></h1>
-                    <p>Verschaffe dir einen prägnanten Überblick <br>
+                    <p data-aos="fade-right" data-aos-delay="150" data-aos-offset="500" data-aos-duration="1000">Verschaffe dir einen prägnanten Überblick <br>
                     über die Top 5 Webtechnologien.</p>
 
-                    <div class="links">
+                    <div class="links" data-aos="fade-right" data-aos-delay="300"  data-aos-duration="1000">
                         <a class="btn-outline" href="mailto:stoehr.silas@gmail.com" title="Schreibe mir eine Mail">Noch Fragen ?</a>
                         <a class="btn-outline-dark btn-arrow" href="https://github.com/silasstoehr/fachreferat" title="Zu meinem GitHub Projekt" target="_blank">Github Repo 
                             <svg width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#21DCA7" class="w-6 h-6">
@@ -74,7 +76,7 @@
 
             <!-- Einleitung -->
             <div class="intro">
-                <p class="text-center">Die rasante Entwicklung des Internets hebt die Relevanz von Programmiersprachen in der
+                <p class="text-center" data-aos="fade-up">Die rasante Entwicklung des Internets hebt die Relevanz von Programmiersprachen in der
                     Webentwicklung hervor, da die Auswahl maßgeblich die Effizienz, Leistung und
                     Funktionalität dynamischer Websites beeinflusst. In einer Ära, in der die Online-Präsenz
                     entscheidend für den Erfolg von Unternehmen ist, wird die Kenntnis und Auswahl
@@ -319,7 +321,7 @@
             <path d="M430 -1.52588e-05L0 207L0 -1.52588e-05L430 -1.52588e-05Z" fill="#21DCA7"/>
             </svg>
             <div class="fazit">
-                <p class="text-center">
+                <p class="text-center" data-aos="fade-up">
                     Abschließend zeigt sich: HTML und CSS bilden das Grundgerüst, JavaScript bringt Interaktivität, Python
                     steht für Vielseitigkeit, und PHP macht das Web dynamisch. Jede Sprache hat ihren Platz und große Beliebtheit in der Softwareentwickler Community.
                 <br>
@@ -331,5 +333,9 @@
                 Mit viel ❤️ gemacht von <a class="btn-underline" href="https://github.com/silasstoehr/" title="GitHub Profil von Silas">Silas Noah Stöhr</a>.
             </div>
         </footer>
+
+        <script>
+            AOS.init();
+          </script>
     </body>
 </html>
