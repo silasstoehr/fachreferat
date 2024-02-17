@@ -109,92 +109,6 @@ nav {
    margin: 0 auto;
 }
 
-@media (max-width: 1200px) {
-
-    body .container {
-        padding: 3rem 12px;
-    }
-
-    nav {
-        flex-direction: column;
-    }
-
-    body h1, body .dot{
-        font-size: 32px;
-    }
-    p, span, li, a  {
-        font-size: 16px;
-    }
-
-    body .landingpage .links {
-        margin-top: 1rem;
-    }
-    body .btn-outline, body .btn-outline-dark {
-        padding: 0.5rem 1rem !important;
-    }
-
-    nav .nav-right {
-        display: none;
-    }
-    body .landingpage .col-12 {
-        width: 100%;
-    }
-    body .landingpage {
-        flex-direction: column;
-        gap: 4rem;
-    }
-
-    .phone-img {
-        width: 220px;
-        height: auto;
-    }
-
-    .uebergang {
-        display: none;
-    }
-}
-
-
-@media (min-width: 1201px) {
-
-    p  {
-        font-size: 18px;
-    }
-
-    .landingpage {
-        min-height: 80vh;
-    }
-
-    nav .nav-right ul li {
-        width: 180px;
-    }
-
-    #h1-small {
-        font-size: 20px;
-    }
-
-    .landingpage .col-12 {
-        width: 50%;
-    }
-
-    .phone-img {
-        width: 550px;
-        height: auto;
-    }
-
-    .landingpage p {
-        font-size: 20px;
-    }
-
-    .uebergang-mb {
-        display: none;
-    }
-
-    footer .fazit {
-        font-size: 20px;
-    }
-}
-
 .landingpage .links {
     gap: 2rem;
 }
@@ -358,7 +272,7 @@ footer .autor a {
 .pl .headline {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 0;
+    padding-bottom: 1rem;
     border-bottom: 1px solid #e8e9ea8f;
 }
 
@@ -391,9 +305,36 @@ footer .autor a {
     margin-bottom: 1rem;
 }
 
+/* Mobile und kleiner */
+@media (max-width: 575.98px) {
 
-/* Mobile */
-@media (max-width: 1200px) {
+    nav {
+        flex-direction: column;
+    }
+
+    body h1, body .dot{
+        font-size: 32px;
+    }
+
+    p, span, li, a  {
+        font-size: 16px;
+    }
+
+    body .landingpage .links {
+        margin-top: 1rem;
+    }
+    body .btn-outline, body .btn-outline-dark {
+        padding: 0.5rem 1rem !important;
+    }
+
+    nav .nav-right {
+        display: none;
+    }
+
+    .phone-img {
+        width: 220px;
+        height: auto;
+    }
 
     .pl .headline {
         flex-direction: column;
@@ -410,14 +351,117 @@ footer .autor a {
     .pl > .row {
         flex-direction: column;
     }
+}
+
+
+/*** ### RESPONSIV DESIGN ### ***/
+
+/* Tablets und kleiner */
+@media (max-width: 991.98px) { 
+
+    body .container {
+        padding: 3rem 12px;
+    }
+
+
+    body .landingpage {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    body .landingpage .col-12 {
+        width: 100%;
+    }
+
+    p, span, li, a  {
+        font-size: 18px;
+    }
 
     .all-pl {
         gap: 2rem;
     }
+
+    .uebergang {
+        display: none;
+    }
 }
 
-/* Desktop */
-@media (min-width: 1201px) {
+/* Tablets */
+@media (max-width: 991.98px) and (min-width: 575.99px){ 
+
+    body h1, body .dot{
+        font-size: 48px;
+    }
+    
+    .phone-img {
+        width: 420px;
+        height: auto;
+    }
+}
+
+/* Laptop und kleiner */
+@media (max-width: 1199.97px){ 
+    .phone-img {
+        width: 320px;
+        height: auto;
+    }
+}
+
+/* Laptop */
+@media (min-width: 991.99px) and (max-width: 1199.97px){ 
+
+}
+
+/* Laptop und größer */
+@media (min-width: 991.99px) { 
+    .uebergang-mb {
+        display: none;
+    }
+    header {
+        min-height: 65vh;
+    }
+    .container {
+        padding: 3rem;
+    }
+ }
+
+/* Desktop und größer */
+@media (min-width: 1199.98px) {
+
+    p  {
+        font-size: 18px;
+    }
+
+    .landingpage {
+        min-height: 80vh;
+    }
+
+    nav .nav-right ul li {
+        width: 180px;
+    }
+
+    #h1-small {
+        font-size: 20px;
+    }
+
+    .landingpage .col-12 {
+        width: 50%;
+    }
+
+    .phone-img {
+        width: 550px;
+        height: auto;
+    }
+
+    .landingpage p {
+        font-size: 20px;
+    }
+
+
+    footer .fazit {
+        font-size: 20px;
+    }
+
     .pl > .row > .col-right {
         width: 30%;
         display: flex;
@@ -447,6 +491,9 @@ footer .autor a {
         gap: 4rem;
     }
 }
+
+
+/*** ### OUTFIT FONTS ### ***/
 
 /* outfit-200 - latin */
 @font-face {
