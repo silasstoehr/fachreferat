@@ -128,6 +128,15 @@ footer svg.uebergang, footer svg.uebergang-mb {
 
 /*** Text ***/
 
+body a.link {
+    text-decoration: underline;
+}
+
+body a.link:hover {
+    text-decoration: none;
+    color: var(--green);
+}
+
 p, span, li, a {
     font-size: 16px;
     font-weight: 300;
@@ -138,13 +147,6 @@ body h1, .dot {
     font-size: 70px;
     font-weight: 600;
     white-space: nowrap;
-}
-
-main .intro {
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-    align-items: center;
 }
 
 .text-center {
@@ -237,6 +239,38 @@ body .btn-arrow {
     display: flex;
     gap: 8px;
 }
+
+/*** Einleitung ***/
+
+main .intro {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .autor {
+    display: flex;
+    gap: 1.5rem;
+    padding: 2rem 1rem;
+}
+
+main .autor img {
+    border-radius: 50%;
+}
+
+main .autor .col-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main .autor .col-right .autor-name {
+    font-weight: 600;
+    font-size: 18px;
+}
+
 
 
 /*** Programmiersprachen ***/
@@ -385,6 +419,10 @@ footer .autor a {
 
     .pl > .row {
         flex-direction: column;
+    }
+
+    main .autor .col-right span.autor-name {
+        font-size: 16px !important;
     }
 }
 
