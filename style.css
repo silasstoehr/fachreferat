@@ -310,9 +310,26 @@ footer {
     position: relative;
 }
 
-footer .autor {
+footer .fusszeile {
+    display: flex;
     position: absolute;
-    bottom: 2rem;
+    bottom: 0;
+    width: 100%;
+    gap: 1rem;
+}
+
+footer .fusszeile .col-left,
+footer .fusszeile .col-right {
+    width: 15%;
+}
+
+footer .autor {
+    width: 70%;
+    text-align: center;
+}
+
+footer .col-right {
+    text-align: end;
 }
 
 footer .autor a {
@@ -394,6 +411,22 @@ footer .autor a {
 
     .uebergang {
         display: none;
+    }
+
+    footer .fusszeile {
+        flex-direction: column;
+    }
+
+    footer .fusszeile .col-left,
+    footer .fusszeile .col-right,
+    footer .fusszeile .autor {
+        width: 100%;
+    }
+
+    footer .fusszeile .col-left,
+    footer .fusszeile .col-right {
+        display: flex;
+        justify-content: center;
     }
 }
 
