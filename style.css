@@ -1,3 +1,5 @@
+/*** Grundlegende Styles ***/
+
 :root {
     --green: #21DCA7;
     --dark: #111A25;
@@ -23,28 +25,25 @@ body {
     min-height: 200vh;
 }
 
+main {
+    background-color: var(--green);
+    position: relative;
+}
+
 body main * {
     color: var(--dark);
+}
+
+.container {
+    display: flex;
+   /* padding: 3rem 6rem; */
+   max-width: 1600px;
+   margin: 0 auto;
 }
 
 .img-fluid {
     max-width: 100%;
     height: max-content;
-}
-
-body h1, .dot {
-    font-size: 70px;
-    font-weight: 600;
-    white-space: nowrap;
-}
-
-#h1-small {
-    color: var(--green);
-    font-weight: 400;
-}
-
-.dot {
-    color: var(--green);
 }
 
 body #banner {
@@ -57,19 +56,6 @@ height: 5px;
 
 background: rgb(33,220,167);
 background: linear-gradient(90deg, rgba(33,220,167,1) 0%, rgba(33,220,167,0) 100%);
-}
-
-p, span, li, a {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.6;
-}
-
-body a {
-    position: relative;
-    text-decoration: none;
-    color: var(--green);
-    text-transform: uppercase;
 }
 
 body a.btn-underline::before {
@@ -90,27 +76,103 @@ transform-origin: left;
 transform: scaleX(1);
 }
 
+body .btn-outline {
+    padding: 1rem 2rem;
+    border: 1px var(--green) solid;
+    border-radius: 90px;
+    font-weight: 300;
+}
+
+body .btn-outline-dark {
+    padding: 1rem 2rem;
+    border: 1px var(--dark) solid;
+    border-radius: 90px;
+    font-weight: 300;
+}
+
+body .btn-outline-dark:hover {
+    border: 1px var(--green) solid;
+    transition: .2s ease-in-out;
+}
+
+body .btn-outline:hover {
+    background-color: var(--green);
+    color: var(--dark);
+    transition: .2s ease-in-out;
+}
+
+svg.uebergang, svg.uebergang-mb {
+    position: absolute;
+    width: 100%;
+    bottom: 100%;
+    left: 0;
+    height: fit-content;
+    right: 0;
+    z-index: -9;
+}
+
+footer svg.uebergang, footer svg.uebergang-mb {
+    position: absolute;
+    width: 100%;
+    top: -1px;
+    left: 0;
+    height: fit-content;
+    right: 0;
+    z-index: -9;
+}
+
+
+/*** Text ***/
+
+p, span, li, a {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+body h1, .dot {
+    font-size: 70px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+main .intro {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.text-center {
+    max-width: 800px;
+    font-weight: 600;
+    text-align: center;
+    padding: 12px;
+}
+
+#h1-small {
+    color: var(--green);
+    font-weight: 400;
+}
+
+.dot {
+    color: var(--green);
+}
+
+body a {
+    position: relative;
+    text-decoration: none;
+    color: var(--green);
+    text-transform: uppercase;
+}
+
+/*** Navigation ***/
+
 nav {
     justify-content: space-between;
     gap: 1rem;
     padding-top: 3rem;
     padding-bottom: 3rem;
-}
-
-.nav-left {
-    display: flex;
-    align-items: center;
-}
-
-.container {
-    display: flex;
-   /* padding: 3rem 6rem; */
-   max-width: 1600px;
-   margin: 0 auto;
-}
-
-.landingpage .links {
-    gap: 2rem;
 }
 
 nav .nav-right ul {
@@ -122,6 +184,18 @@ nav .nav-right ul li {
     text-align: end;
     padding: 12px;
     margin: 0 5px;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+
+/*** Landingpage ***/
+
+.landingpage .links {
+    gap: 2rem;
 }
 
 .landingpage {
@@ -155,97 +229,13 @@ nav .nav-right ul li {
     justify-content: center;
 }
 
-body .btn-outline {
-    padding: 1rem 2rem;
-    border: 1px var(--green) solid;
-    border-radius: 90px;
-    font-weight: 300;
-}
-
-body .btn-outline-dark {
-    padding: 1rem 2rem;
-    border: 1px var(--dark) solid;
-    border-radius: 90px;
-    font-weight: 300;
-}
-
-body .btn-outline-dark:hover {
-    border: 1px var(--green) solid;
-    transition: .2s ease-in-out;
-}
-
-body .btn-outline:hover {
-    background-color: var(--green);
-    color: var(--dark);
-    transition: .2s ease-in-out;
-}
-
-main {
-    background-color: var(--green);
-    position: relative;
-}
-
-
-
-svg.uebergang, svg.uebergang-mb {
-    position: absolute;
-    width: 100%;
-    bottom: 100%;
-    left: 0;
-    height: fit-content;
-    right: 0;
-    z-index: -9;
-}
-
-footer svg.uebergang, footer svg.uebergang-mb {
-    position: absolute;
-    width: 100%;
-    top: -1px;
-    left: 0;
-    height: fit-content;
-    right: 0;
-    z-index: -9;
-}
-
 body .btn-arrow {
     display: flex;
     gap: 8px;
 }
 
-main .intro {
-    display: flex;
-    justify-content: center;
-    min-height: 100vh;
-    align-items: center;
-}
 
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 0 12px;
-    position: relative;
-}
-
-.text-center {
-    max-width: 800px;
-    font-weight: 600;
-    text-align: center;
-    padding: 12px;
-}
-
-footer .autor {
-    position: absolute;
-    bottom: 2rem;
-}
-
-footer .autor a {
-    color: var(--white);
-    text-transform: none;
-}
-
+/*** Programmiersprachen ***/
 .all-pl {
     display: flex;
     flex-direction: column;
@@ -293,8 +283,6 @@ footer .autor a {
     gap: 10px;
 }
 
-
-
 .pl .benefits {
     display: flex;
     width: 100%;
@@ -304,6 +292,32 @@ footer .autor a {
 .pl .benefits h3 {
     margin-bottom: 1rem;
 }
+
+
+/*** Footer ***/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0 12px;
+    position: relative;
+}
+
+footer .autor {
+    position: absolute;
+    bottom: 2rem;
+}
+
+footer .autor a {
+    color: var(--white);
+    text-transform: none;
+}
+
+
+/*** RESPONSIV DESIGN ***/
 
 /* Mobile und kleiner */
 @media (max-width: 575.98px) {
@@ -352,9 +366,6 @@ footer .autor a {
         flex-direction: column;
     }
 }
-
-
-/*** ### RESPONSIV DESIGN ### ***/
 
 /* Tablets und kleiner */
 @media (max-width: 991.98px) { 
@@ -493,7 +504,7 @@ footer .autor a {
 }
 
 
-/*** ### OUTFIT FONTS ### ***/
+/*** OUTFIT FONTS ***/
 
 /* outfit-200 - latin */
 @font-face {
@@ -502,60 +513,60 @@ footer .autor a {
     font-style: normal;
     font-weight: 200;
     src: url('../fonts/outfit-v11-latin-200.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* outfit-300 - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Outfit';
-    font-style: normal;
-    font-weight: 300;
-    src: url('../fonts/outfit-v11-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* outfit-regular - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Outfit';
-    font-style: normal;
-    font-weight: 400;
-    src: url('../fonts/outfit-v11-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* outfit-500 - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Outfit';
-    font-style: normal;
-    font-weight: 500;
-    src: url('../fonts/outfit-v11-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* outfit-600 - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Outfit';
-    font-style: normal;
-    font-weight: 600;
-    src: url('../fonts/outfit-v11-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* outfit-700 - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Outfit';
-    font-style: normal;
-    font-weight: 700;
-    src: url('../fonts/outfit-v11-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* outfit-800 - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Outfit';
-    font-style: normal;
-    font-weight: 800;
-    src: url('../fonts/outfit-v11-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
-  /* outfit-900 - latin */
-  @font-face {
-    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-    font-family: 'Outfit';
-    font-style: normal;
-    font-weight: 900;
-    src: url('../fonts/outfit-v11-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-  }
+}
+/* outfit-300 - latin */
+@font-face {
+font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 300;
+src: url('../fonts/outfit-v11-latin-300.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* outfit-regular - latin */
+@font-face {
+font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 400;
+src: url('../fonts/outfit-v11-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* outfit-500 - latin */
+@font-face {
+font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 500;
+src: url('../fonts/outfit-v11-latin-500.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* outfit-600 - latin */
+@font-face {
+font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 600;
+src: url('../fonts/outfit-v11-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* outfit-700 - latin */
+@font-face {
+font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 700;
+src: url('../fonts/outfit-v11-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* outfit-800 - latin */
+@font-face {
+font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 800;
+src: url('../fonts/outfit-v11-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* outfit-900 - latin */
+@font-face {
+font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+font-family: 'Outfit';
+font-style: normal;
+font-weight: 900;
+src: url('../fonts/outfit-v11-latin-900.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
