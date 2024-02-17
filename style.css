@@ -30,8 +30,12 @@ main {
     position: relative;
 }
 
-body main * {
+body main *:not(code span) {
     color: var(--dark);
+}
+
+code {
+    border-radius: 6px;
 }
 
 .container {
@@ -250,11 +254,11 @@ body .btn-arrow {
     padding: 3rem 4rem;
 }
 
-.pl * {
+.pl *:not(code span) {
     color: var(--white);
 }
 
-.pl *:not(h1, h2, h3)  {
+.pl *:not(h1, h2, h3, code span)  {
     font-weight: 300;
     color: var(--light);
 }
