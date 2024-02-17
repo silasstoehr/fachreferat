@@ -373,10 +373,6 @@ footer .autor a {
         width: 100%;
     }
 
-    p, span, li, a  {
-        font-size: 18px;
-    }
-
     .all-pl {
         gap: 2rem;
     }
@@ -396,6 +392,10 @@ footer .autor a {
     .phone-img {
         width: 420px;
         height: auto;
+    }
+
+    p, span, li, a  {
+        font-size: 18px;
     }
 }
 
